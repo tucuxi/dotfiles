@@ -2,10 +2,9 @@
 call pathogen#infect()
 
 syntax on
-filetype plugin on
-filetype indent on
+filetype indent plugin on
 set nocompatible
-" set tabstop=4
+set tabstop=4
 " set expandtab
 set cursorline
 set incsearch
@@ -16,8 +15,8 @@ set relativenumber
 let mapleader=","
 
 " Solarized colors
-colorscheme solarized
 set background=dark
+colorscheme solarized
 
 " Syntastic plugin - syntax checker
 set statusline+=%#warningmsg#
