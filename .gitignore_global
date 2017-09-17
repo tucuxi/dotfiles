@@ -1,0 +1,57 @@
+#### VIM
+.*.swp
+
+### Emacs
+*~
+
+### R
+.RData
+.Rhistory
+
+### Java
+*.class
+bin/
+
+### Python
+__pycache__/
+
+### LaTeX 
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.eps
+*-eps-converted-to.pdf
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+### Gradle
+.gradle/
+
+### OS X 
+._*
+.DS_Store
+.Trashes
