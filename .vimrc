@@ -1,7 +1,7 @@
 " Load plugins from ~/.vim/bundle
 call pathogen#infect()
 
-syntax on
+syntax enable
 filetype indent plugin on
 set nocompatible
 set tabstop=4
@@ -14,9 +14,13 @@ set wildmenu
 set relativenumber
 let mapleader=","
 
-" Solarized colors
-set background=dark
-colorscheme solarized
+" Solarized colors on Mac
+if has("unix")
+  set background=dark
+  colorscheme solarized
+  let g:solarized_termcolors=256
+  let g:solarized_termtrans=1
+endif
 
 " Syntastic plugin - syntax checker
 set statusline+=%#warningmsg#
