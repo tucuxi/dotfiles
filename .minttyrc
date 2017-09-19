@@ -24,3 +24,5 @@ Columns=90
 Rows=30
 Font=Consolas
 FontHeight=11
+Locale=C
+Charset=UTF-8
