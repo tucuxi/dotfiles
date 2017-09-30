@@ -5,7 +5,7 @@ syntax enable
 filetype indent plugin on
 set nocompatible
 set tabstop=4
-" set expandtab
+set expandtab
 set cursorline
 set incsearch
 set foldenable
