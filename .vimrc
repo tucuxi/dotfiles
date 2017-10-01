@@ -2,10 +2,12 @@
 call pathogen#infect()
 
 syntax enable
-filetype indent plugin on
+filetype plugin indent on
 set nocompatible
-set tabstop=4
 set expandtab
+set shiftwidth=2
+set softtabstop=2
+set autoindent
 set cursorline
 set incsearch
 set foldenable
