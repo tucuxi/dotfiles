@@ -390,6 +390,8 @@ Silent
 
     \singlespacing \onehalfspacing \cleardoublepage
 
+    \clearscrheadfoot
+
     \printbibliography
 }[
 # Here you can put regular expressions to match Silent macros.  It was
