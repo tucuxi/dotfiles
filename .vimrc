@@ -1,5 +1,11 @@
-" Load plugins from ~/.vim/bundle
-call pathogen#infect()
+" Load plugins using vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'vim-syntastic/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'lervag/vimtex'
+call plug#end()
 
 syntax enable
 filetype plugin indent on
