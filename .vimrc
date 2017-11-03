@@ -42,4 +42,4 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_tex_checkers=['chktex']
 
 " vimtex - LaTeX integration
-let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:vimtex_compiler_latexmk = {'callback' : 0, 'options' : ['-lualatex',],}
