@@ -21,6 +21,7 @@ set path+=**
 set wildmenu
 set relativenumber
 let mapleader=","
+let maplocalleader=","
 
 " Solarized colors on Mac
 if has("unix")
