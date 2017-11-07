@@ -23,13 +23,11 @@ set relativenumber
 let mapleader=","
 let maplocalleader=","
 
-" Solarized colors on Mac
-if has("unix")
-  set background=dark
-  colorscheme solarized
-  let g:solarized_termcolors=256
-  let g:solarized_termtrans=1
-endif
+" Solarized color scheme
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 
 " Syntastic plugin - syntax checker
 set statusline+=%#warningmsg#
