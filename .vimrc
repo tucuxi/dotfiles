@@ -4,7 +4,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
-"Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 call plug#end()
 
 syntax enable
@@ -40,4 +40,4 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_tex_checkers=['chktex']
 
 " vimtex - LaTeX integration
-let g:vimtex_compiler_latexmk = {'callback' : 0, 'options' : ['-lualatex',],}
+" let g:vimtex_compiler_latexmk = {'callback' : 0, 'options' : ['-lualatex',],}
