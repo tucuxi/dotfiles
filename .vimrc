@@ -4,7 +4,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 call plug#end()
 
 syntax enable
