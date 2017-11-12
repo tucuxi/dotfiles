@@ -383,6 +383,8 @@ Silent
 
     \xspace
 
+    \baselineskip \parskip
+
     \addlinespace \cr \fill \frontmatter
     \toprule \midrule \bottomrule
 
