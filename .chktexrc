@@ -390,7 +390,7 @@ Silent
 
     \addabbrvspace
 
-    \singlespacing \onehalfspacing \cleardoublepage
+    \singlespacing \onehalfspacing \cleardoublepage \baselineskip
 
     \clearscrheadfoot
 
