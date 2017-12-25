@@ -19,6 +19,7 @@ set incsearch
 set foldenable
 set path+=**
 set wildmenu
+set number
 set relativenumber
 let mapleader=","
 let maplocalleader=","
