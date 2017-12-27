@@ -1,3 +1,5 @@
+Locale=en_US
+Charset=UTF-8
 BoldAsFont=yes
 Term=xterm-256color
 BoldAsColour=yes
@@ -20,9 +22,3 @@ BoldWhite=253,246,227
 ForegroundColour=238,232,213
 BackgroundColour=0,43,54
 CursorColour=133,153,0
-Columns=90
-Rows=30
-Font=Consolas
-FontHeight=11
-Locale=C
-Charset=UTF-8
