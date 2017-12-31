@@ -10,6 +10,7 @@ call plug#end()
 syntax enable
 filetype plugin indent on
 set nocompatible
+set nojoinspaces
 set expandtab
 set shiftwidth=2
 set softtabstop=2
