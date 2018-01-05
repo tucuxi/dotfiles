@@ -23,6 +23,9 @@ set wildmenu
 set number
 set relativenumber
 
+" Delete trailing whitespace on write
+autocmd BufWritePre * %s/\s\+$//e
+
 " Dealing with long lines (see *25.4*)
 set linebreak
 set display+=lastline
