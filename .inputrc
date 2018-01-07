@@ -7,3 +7,6 @@ set keymap vi-insert
 Control-l: clear-screen
 set show-mode-in-prompt on
 $endif
+
+# Map non-breaking space to regular
+"\xc2\xa0": " "
