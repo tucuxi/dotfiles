@@ -32,6 +32,9 @@ set display+=lastline
 map <Up> gk
 map <Down> gj
 
+" Redefine inconvenient keys for German keyboard
+nnoremap ü <C-]>
+
 let mapleader=","
 let maplocalleader=","
 
