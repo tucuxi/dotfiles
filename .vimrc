@@ -34,6 +34,8 @@ map <Down> gj
 
 " Redefine inconvenient keys for German keyboard
 nnoremap ü <C-]>
+nnoremap ö [
+nnoremap ä ]
 
 let mapleader=","
 let maplocalleader=","
