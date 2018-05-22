@@ -43,10 +43,6 @@ let maplocalleader=","
 " Solarized color scheme
 set background=dark
 colorscheme solarized
-let g:solarized_visibility="high"
-let g:solarized_contrast="high"
-let g:solarized_termcolors=16
-let g:solarized_termtrans=1
 
 " Syntastic plugin - syntax checker
 set statusline+=%#warningmsg#
