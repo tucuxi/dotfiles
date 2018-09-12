@@ -1,16 +1,15 @@
 " Load plugins using vim-plug
 call plug#begin('~/.vim/plugged')
-" Plug 'vim-syntastic/syntastic'
-Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
-" Plug 'lervag/vimtex'
+" Plug 'vim-syntastic/syntastic'
+Plug 'lervag/vimtex'
 call plug#end()
 
 set nocompatible
 syntax enable
-
-" Builtin file browsewr plugin netrw
 filetype plugin indent on
 
 " Search subdirectories
@@ -22,13 +21,14 @@ set wildmenu
 set nojoinspaces
 set expandtab
 set shiftwidth=2
-set softtabstop=2
 set autoindent
 set cursorline
-set incsearch
-set foldenable
 set number
 set relativenumber
+set foldenable
+set foldmethod=marker
+set ignorecase
+set incsearch
 
 " Delete trailing whitespace on write
 autocmd BufWritePre * %s/\s\+$//e
@@ -47,9 +47,17 @@ nnoremap ä ]
 let mapleader=","
 let maplocalleader=","
 
-" PLugin solarized -- color scheme
+" PLugin vim-colors-solarized
 set background=dark
 colorscheme solarized
+" let g:solarized_termtrans=1
+
+" Plugin vim-airline
+let g:airline_powerline_fonts=0
+
+" Plugin vim-airline-themes
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Plugin syntastic -- syntax checker
 " set statusline+=%#warningmsg#
