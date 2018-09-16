@@ -6,6 +6,9 @@
 
 [ -r $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
+export LANG=en_US.UTF-8
+export HOMEBREW_GITHUB_API_TOKEN="a6a17885d0ac74677e614aaa724331bc2bc64317"
+export RANGER_LOAD_DEFAULR_RC=FALSE
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias grep='grep --color=auto'
@@ -18,34 +21,10 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias h='history'
 alias ll='ls -l'
+alias v='nvim'                            # neovim
 
 complete -cf sudo
 
 shopt -s checkwinsize
 shopt -s expand_aliases
 shopt -s histappend
-
-#
-# # ex - archive extractor
-# # usage: ex <file>
-ex()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
