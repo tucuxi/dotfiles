@@ -52,12 +52,9 @@ set background=dark
 colorscheme solarized
 " let g:solarized_termtrans=1
 
-" Plugin vim-airline
-let g:airline_powerline_fonts=0
-
 " Plugin vim-airline-themes
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+let g:airline_theme='base16_solarized'
+" let g:airline_solarized_bg='dark'
 
 " Plugin syntastic -- syntax checker
 " set statusline+=%#warningmsg#
