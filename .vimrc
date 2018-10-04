@@ -20,7 +20,8 @@ set wildmenu
 
 set nojoinspaces
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set cursorline
 set number
