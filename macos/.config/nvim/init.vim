@@ -48,7 +48,7 @@ nnoremap ä ]
 let mapleader=","
 let maplocalleader=","
 
-" PLugin vim-colors-solarized
+" Plugin vim-colors-solarized
 set background=dark
 colorscheme solarized
 " let g:solarized_termtrans=1
