@@ -1,6 +1,6 @@
 " Load plugins using vim-plug
 call plug#begin()
-Plug 'altercation/vim-colors-solarized'
+Plug 'romainl/flattened'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -48,14 +48,13 @@ nnoremap ä ]
 let mapleader=","
 let maplocalleader=","
 
-" Plugin vim-colors-solarized
-set background=dark
-colorscheme solarized
-" let g:solarized_termtrans=1
+" Plugin flattened
+colorscheme flattened_dark
 
 " Plugin vim-airline-themes
-let g:airline_theme='base16_solarized'
-" let g:airline_solarized_bg='dark'
+" let g:airline_theme='base16_solarized'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Plugin syntastic -- syntax checker
 " set statusline+=%#warningmsg#
