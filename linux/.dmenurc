@@ -3,7 +3,7 @@
 #
 
 ## define the font for dmenu to be used
-DMENU_FN="sans-11"
+DMENU_FN="sans"
 
 ## background colour for unselected menu-items
 DMENU_NB="#002b36"
@@ -12,10 +12,10 @@ DMENU_NB="#002b36"
 DMENU_NF="#839496"
 
 ## background colour for selected menu-items
-DMENU_SB="#073642"
+DMENU_SB="#859900"
 
 ## textcolour for selected menu-items
-DMENU_SF="#cb4b16"
+DMENU_SF="#fdf6e3"
 
 ## command for the terminal application to be used:
 TERMINAL_CMD="st -e"
