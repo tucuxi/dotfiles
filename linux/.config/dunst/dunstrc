@@ -1,8 +1,8 @@
 [global]
     frame_width = 1
     frame_color = "#93a1a1"
-    font = sans 10
-    markup = yes
+    font = monospace 10
+    markup = full
 
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -14,13 +14,11 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "%s\n%b"
+    format = "%s %p\n%b"
 
-    bounce_freq = 5
     word_wrap = no
     show_age_threshold = 60
     ignore_newline = no
-    shrink = yes
     transparency = 15
     idle_threshold = 120
     follow = keyboard
