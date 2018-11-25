@@ -1,5 +1,4 @@
-# i3 config file
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# i3 config file (v4)
 
 set $mod Mod4
 set $term --no-startup-id st
@@ -237,16 +236,15 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id dunst
+exec --no-startup-id compton
 # exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id xautolock -time 10 -locker blurlock
+exec_always --no-startup-id sbxkb
 exec --no-startup-id devmon --no-gui
-# exec_always --no-startup-id fix_xcursor
+exec --no-startup-id unclutter
 
 # Color palette used for the terminal ( ~/.Xresources file )
 set_from_resource $term_background background
