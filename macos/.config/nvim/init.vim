@@ -1,11 +1,12 @@
 " Load plugins using vim-plug
 call plug#begin()
-Plug 'romainl/flattened'
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+" Plug 'romainl/flattened'
 " Plug 'vim-syntastic/syntastic'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 call plug#end()
 
 set nocompatible
@@ -48,8 +49,8 @@ nnoremap ä ]
 let mapleader=","
 let maplocalleader=","
 
-" Plugin flattened
-colorscheme flattened_dark
+set background=dark
+colorscheme gruvbox
 
 " Plugin vim-airline-themes
 " let g:airline_theme='base16_solarized'
