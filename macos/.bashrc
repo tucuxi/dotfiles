@@ -9,8 +9,8 @@ export LANG=en_US.UTF-8
 #
 # Editor and pager
 #
-export EDITOR=/usr/local/bin/nvim
-export VISUAL=/usr/local/bin/nvim
+export EDITOR=nvim
+export VISUAL=nvim
 export PAGER=less
 
 #
@@ -50,4 +50,3 @@ shopt -s histappend
 #
 # Special application settings
 #
-export RANGER_LOAD_DEFAULT_RC=FALSE
