@@ -1,0 +1,94 @@
+; Polybar configuration
+
+[bar/main]
+width = 100%
+height = 20
+background = ${colors.bg0}
+foreground = ${colors.fg}
+border-color = ${colors.bg0}
+border-top-size = 1
+border-bottom-size = 2
+line-size = 2
+padding = 2
+module-margin = 2
+font-0 = Noto Sans:style=Medium:size=10:antialias=true;2
+font-1 = Symbols Nerd Font:size=9:antialias=true;2
+modules-left = bspwm
+modules-center = xwindow
+modules-right = date
+wm-restack = bspwm
+tray-position = right
+tray-maxsize = 16
+tray-padding = 2
+
+[colors]
+blk   = #282828
+red   = #cc241d
+grn   = #98971a
+ylw   = #d79921
+blu   = #458588
+mag   = #b16286
+cyn   = #689d6a
+wht   = #a89984
+bblk  = #928374
+bred  = #fb4934
+bgrn  = #b8bb26
+bylw  = #fabd2f
+bblu  = #83a598
+bmag  = #d3869b
+bcyn  = #8ec07c
+bwht  = #ebdbb2
+bg0   = #282828
+bg1   = #3c3836
+fg    = #ebdbb2
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = false
+format = <label-monitor> <label-state>
+label-separator = " "
+label-separator-padding = 0
+label-monitor = %name%
+label-monitor-padding = 3
+label-monitor-foreground = ${colors.wht}
+label-focused = %index%
+label-focused-underline = ${colors.bylw}
+label-focused-padding = 1
+label-focused-background = ${colors.bg1}
+label-occupied = %index%
+label-occupied-underline = ${colors.bblu}
+label-occupied-padding = 1
+label-urgent = %index%
+label-urgent-underline = ${colors.bred}
+label-urgent-padding = 1
+label-empty = %index%
+label-empty-padding = 1
+
+[module/xwindow]
+type = internal/xwindow
+label = " %title% "
+label-maxlen = 100
+
+[module/openvpn]
+type = custom/script
+format-prefix = " "
+exec = openvpn-status.sh
+interval = 4
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_0b_00.3.analog-stereo
+format-volume = <ramp-volume> <label-volume>
+label-muted = "muted"
+ramp-volume-0 = " " 
+ramp-volume-1 = " " 
+ramp-volume-2 = " "
+
+[module/date]
+type = internal/date
+interval = 10
+date = "%a %d %b"
+time = %H:%M
+label = %date% %time%
+
+; vim:ft=ini

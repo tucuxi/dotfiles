@@ -1,0 +1,23 @@
+export PATH=$PATH:$HOME/.local/bin
+
+# Remove duplicates
+PATH=$(echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}')
+
+# Preferred applications
+export BROWSER=firefox
+export EDITOR=vis
+export PAGER=less
+export READER=zathura
+export TERMINAL=alacritty
+export VISUAL=vis
+
+# XDG directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# Application specific settings
+export LESSHISTFILE="-"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_CACHE_HOME/zsh_history"
+export QT_STYLE_OVERRIDE=kvantum
