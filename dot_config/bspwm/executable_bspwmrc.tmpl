@@ -29,8 +29,16 @@ launch () {
 	fi
 }
 
+{{ if eq .systemtype "laptop" }}
+launch polybar laptop
+{{ else }}
 launch polybar main
-launch sxhkd
+{{ end }}
+
+{{ if ne .systemtype "vm" }}
 launch udiskie --tray
 launch dropbox
 launch pasystray
+{{ end }}
+
+launch sxhkd
