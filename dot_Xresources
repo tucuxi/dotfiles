@@ -1,6 +1,5 @@
 ! -----------------------------------------------------------------------------
-! File: gruvbox-dark.xresources
-! Description: Retro groove colorscheme generalized
+! Retro groove colorscheme generalized
 ! Author: morhetz <morhetz@gmail.com>
 ! Source: https://github.com/morhetz/gruvbox-generalized
 ! -----------------------------------------------------------------------------
@@ -33,3 +32,14 @@
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+! -----------------------------------------------------------------------------
+! Font settings
+! -----------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
