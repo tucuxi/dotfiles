@@ -23,6 +23,9 @@ tray-padding = 2
 
 [bar/laptop]
 inherit = bar/main
+height = 24
+font-0 = Noto Sans:size=12:antialias=true;2
+font-1 = Symbols Nerd Font:size=12:antialias=true;2
 modules-right = battery date
 
 [colors]
