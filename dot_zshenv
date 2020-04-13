@@ -20,4 +20,5 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export LESSHISTFILE="-"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_CACHE_HOME/zsh_history"
+export PASSWORD_STORE_DIR="$XDG_CONFIG_HOME/pass"
 export QT_STYLE_OVERRIDE=kvantum
