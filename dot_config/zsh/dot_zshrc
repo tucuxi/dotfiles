@@ -65,7 +65,7 @@ ZSH_CUSTOM="/usr/share/zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(extract vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 # ESC timeout for vi-mode
 export KEYTIMEOUT=30
