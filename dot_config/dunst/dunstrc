@@ -52,4 +52,4 @@
     foreground = "#fb4934"
     timeout = 8
 
-# vim: ft=cfg
+# vim: ft=ini
