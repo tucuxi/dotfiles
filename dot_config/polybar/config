@@ -181,4 +181,4 @@ animation-discharging-4 = 
 ; Framerate in milliseconds
 animation-discharging-framerate = 500
 
-; vim:ft=dosini
+; vim:ft=ini
