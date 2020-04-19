@@ -3,5 +3,3 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-
-source /home/kds/.config/broot/launcher/bash/br
