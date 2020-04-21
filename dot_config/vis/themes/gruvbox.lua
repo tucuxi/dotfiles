@@ -4,7 +4,7 @@
 -- Set to 'dark' or 'light'
 local mode	= 'dark'
 -- Set to 'hard', 'medium', or 'soft'
-local contrast	= 'hard'
+local contrast	= 'medium'
 
 local gruvbox = {
 	dark0h	= '#1d2021',
