@@ -9,6 +9,9 @@ alias ll='exa --icons --group-directories-first -l'
 alias lla='exa --icons --group-directories-first -la'
 alias tree='exa --icons -T'
 
+# Enable completions
+autoload -Uz compinit && compinit
+
 # Enable autosuggestions plugin
 source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
@@ -30,3 +33,5 @@ bindkey -e
 
 # Set starship prompt
 eval "$(starship init zsh)"
+
+# vim: ft=bash
