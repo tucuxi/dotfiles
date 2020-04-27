@@ -16,9 +16,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-# Application specific settings
+# zsh history
+export HISTFILE="XDG_CACHE_HOME/zsh_history"
+export HISTSIZE=2000
+export SAVEHIST=2000
+setopt HIST_IGNORE_ALL_DUPS
+
+ #Application specific settings
 export LESSHISTFILE="-"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_CACHE_HOME/zsh_history"
 export PASSWORD_STORE_DIR="$XDG_CONFIG_HOME/pass"
 export QT_STYLE_OVERRIDE=kvantum
+
+# vim: ft=bash
