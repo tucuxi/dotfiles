@@ -26,7 +26,6 @@ setopt HIST_IGNORE_ALL_DUPS
 export LESSHISTFILE="-"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_CACHE_HOME/zsh_history"
-export PASSWORD_STORE_DIR="$XDG_CONFIG_HOME/pass"
 export QT_STYLE_OVERRIDE=kvantum
 
 # vim: ft=bash
