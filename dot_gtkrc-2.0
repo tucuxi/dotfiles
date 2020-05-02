@@ -1,0 +1,4 @@
+gtk-theme-name = "Arc-Dark-solid"
+gtk-fallback-icon-theme = "Adwaita"
+gtk-icon-theme-name = "Arc"
+gtk-font-name = "sans-serif 10"
