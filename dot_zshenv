@@ -1,7 +1,7 @@
-export PATH=$PATH:$HOME/.local/bin
-
-# Remove duplicates
-PATH=$(echo -n $PATH | awk -v RS=: '!($0 in a) {a[$0]; printf("%s%s", length(a) > 1 ? ":" : "", $0)}')
+# Eliminate duplicates in PATH and add .local/bin
+typeset -U PATH path
+path=("$HOME/.local/bin" "$path[@]")
+export PATH
 
 # Preferred applications
 export BROWSER=firefox
