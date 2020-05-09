@@ -1,13 +1,13 @@
-alias e='$EDITOR'
-alias o='xdg-open'
-alias uma='udiskie-umount --all'
+alias e="$VISUAL"
+alias o="xdg-open"
+alias uma="udiskie-umount --all"
 
 # Use exa instead of ls and tree
-alias l='exa --icons --group-directories-first'
-alias la='exa --icons --group-directories-first -a'
-alias ll='exa --icons --group-directories-first -l'
-alias lla='exa --icons --group-directories-first -la'
-alias tree='exa --icons -T'
+alias l="exa --icons --group-directories-first"
+alias la="exa --icons --group-directories-first -a"
+alias ll="exa --icons --group-directories-first -l"
+alias lla="exa --icons --group-directories-first -la"
+alias tree="exa --icons -T"
 
 # Enable completions
 autoload -Uz compinit && compinit
