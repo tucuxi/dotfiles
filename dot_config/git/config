@@ -2,3 +2,7 @@
 	email = kschmatz@gmail.com
 	name = Klaus-Dieter Schmatz
 	signingkey = C260994EA35C20A7
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --numstat
+	lstags = tag --list --sort=committerdate --format '%(refname:short) %(creatordate:short) %(subject)'
