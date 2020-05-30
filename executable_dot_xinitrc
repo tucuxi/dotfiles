@@ -1,0 +1,13 @@
+#!/bin/sh
+
+xrdb -merge .Xresources
+
+udiskie &
+
+while true
+do
+	xsetroot -name "$(date '+%a %d %b %R')"
+	sleep 10
+done &
+
+exec dwm
