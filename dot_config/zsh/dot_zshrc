@@ -9,6 +9,9 @@ alias ll="exa --icons --group-directories-first -l"
 alias lla="exa --icons --group-directories-first -la"
 alias tree="exa --icons -T"
 
+# Use emacs keybindings
+bindkey -e
+
 # Enable completions
 autoload -Uz compinit && compinit
 
@@ -17,6 +20,11 @@ source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Enable syntax-highlighting plugin
 source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Enable editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
 
 # Define lfcd command
 if [ -f "$XDG_CONFIG_HOME/lf/lfcd.sh" ]; then
@@ -27,9 +35,6 @@ fi
 if [ -f "$XDG_CONFIG_HOME/lf/lficons.sh" ]; then
 	source "$XDG_CONFIG_HOME/lf/lficons.sh"
 fi
-
-# Use emacs keybindings
-bindkey -e
 
 # Set starship prompt
 eval "$(starship init zsh)"
