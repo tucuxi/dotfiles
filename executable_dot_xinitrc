@@ -1,13 +1,18 @@
 #!/bin/sh
 
+# Stop child processes before exiting
+trap "pkill -P $$" EXIT
+
 xrdb -merge .Xresources
 
 udiskie &
 
+# Update status bar regularly
 while true
 do
 	xsetroot -name "$(date '+ %a %-d %b %R')"
 	sleep 10
 done &
 
-exec dwm
+# Launch window manager not using `exec'
+dwm
