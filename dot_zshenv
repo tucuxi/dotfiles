@@ -27,10 +27,4 @@ setopt HIST_IGNORE_ALL_DUPS
 export LESSHISTFILE="-"
 export QT_STYLE_OVERRIDE=kvantum
 
-# Let terminal applications access gnome-keyring
-if [ -n "$DESKTOP_SESSION" ]; then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
-
 # vim: ft=bash
