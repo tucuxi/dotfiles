@@ -8,3 +8,5 @@
 alias ls='ls --color=auto'
 
 eval "$(starship init bash)"
+
+# vim: ft=bash
