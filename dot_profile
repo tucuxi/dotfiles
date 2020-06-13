@@ -18,6 +18,6 @@ export LESSHISTFILE="-"
 export QT_STYLE_OVERRIDE=kvantum
 
 # Initialize ssh-agent
-eval $(keychain --eval --quiet --noask)
+eval $(keychain --eval --quiet --timeout 240 --noask)
 
 # vim: ft=bash
