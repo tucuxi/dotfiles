@@ -1,0 +1,9 @@
+[Unit]
+Description=Back up ~/Documents to S3 daily
+
+[Timer]
+OnCalendar=*-*-* 17:15
+Persistent=true
+
+[Install]
+WantedBy=timers.target

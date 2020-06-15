@@ -1,0 +1,10 @@
+[Unit]
+Description=Back up ~/Documents to S3
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/borg-s3-backup/kds-docs.env
+ExecStart=/bin/bash %h/.local/bin/borg-s3-backup.sh
+
+[Install]
+WantedBy=default.target
