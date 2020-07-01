@@ -44,3 +44,10 @@ Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
+
+XLock.fpsfont: lucidasans-10
+XLock.font: lucidasans-14
+XLock.planfont: lucidasans-12
+XLock.fontset: lucidasans-14
+XLock.planfontset: lucidasans-12
+XLock.messagefont: lucidasans-10
