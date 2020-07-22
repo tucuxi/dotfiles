@@ -3,7 +3,14 @@
 # Stop child processes before exiting
 trap "pkill -P $$" EXIT
 
+# Load settings for colors, fonts, etc.
 xrdb -merge .Xresources
+
+# Required to start dunst with systemd if there is no display manager
+systemctl --user import-environment DISPLAY
+
+# Load wallpaper
+$HOME/.fehbg &
 
 udiskie &
 
@@ -14,5 +21,4 @@ do
 	sleep 10
 done &
 
-# Launch window manager not using `exec'
-dwm
+exec dwm
