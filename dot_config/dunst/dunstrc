@@ -28,7 +28,7 @@
     horizontal_padding = 10
     icon_position = left
     max_icon_size = 24
-    icon_path = /usr/share/icons/gruvbox-dark-icons-gtk/24x24/status:/usr/share/icons/gruvbox-dark-icons-gtk/24x24/actions
+    icon_path = /usr/share/icons/gruvbox-dark-icons-gtk/24x24/status:/usr/share/icons/gruvbox-dark-icons-gtk/24x24/actions:/usr/share/icons/gruvbox-dark-icons-gtk/24x24/devices
     browser = /usr/bin/firefox -new-tab
 
 [shortcuts]
