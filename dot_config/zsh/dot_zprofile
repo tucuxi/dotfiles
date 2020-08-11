@@ -3,5 +3,5 @@ eval $(keychain --eval --quiet --timeout 240 --noask)
 
 # Start X
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-	exec startx 2> /dev/null
+	startx 2> $HOME/.xsession-errors
 fi
