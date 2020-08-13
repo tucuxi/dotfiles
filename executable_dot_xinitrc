@@ -33,7 +33,7 @@ fi
 # Load wallpaper
 
 wallpaper=$HOME/.fehbg
-[ -x "$wallpaper" ] && . "$wallpaper"
+[ -x "$wallpaper" ] && . "$wallpaper" &
 
 # Start USB auto mounter
 udiskie &
@@ -43,7 +43,7 @@ udiskie &
 while true
 do
 	xsetroot -name "$(date '+ %a %-d %b %R')"
-	sleep 10
+	sleep 5
 done &
 
 exec dwm
