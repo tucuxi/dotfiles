@@ -19,6 +19,10 @@ bindkey -e
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 
+# Enable aws completion
+autoload -U bashcompinit && bashcompinit
+complete -C aws_completer aws
+
 # Enable autosuggestions plugin
 source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
