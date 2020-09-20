@@ -83,7 +83,7 @@ cmd trash %set -f; mv $fx ~/.trash
 cmd delete ${{
     set -f
     printf "$fx\n"
-    printf "delete?[y/N]"
+    printf "delete? [y/N] "
     read ans
     [ $ans = "y" ] && rm -rf $fx
 }}
