@@ -47,4 +47,7 @@ fi
 # Set starship prompt
 eval "$(starship init zsh)"
 
+# Enable zoxide
+eval "$(zoxide init zsh)"
+
 # vim: ft=bash
