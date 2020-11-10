@@ -24,6 +24,7 @@ export SAVEHIST=2000
 setopt HIST_IGNORE_ALL_DUPS
 
  # Application specific settings
+export FZF_DEFAULT_COMMAND="fd --type f"
 export LESSHISTFILE="-"
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
