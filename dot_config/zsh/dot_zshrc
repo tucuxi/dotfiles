@@ -30,8 +30,8 @@ source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Enable fuzzy finder
-source "/usr/share/fzf/key-bindings.zsh"
-source "/usr/share/fzf/completion.zsh"
+[ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
+[ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"
 
 # Enable editor
 autoload -Uz edit-command-line
@@ -39,14 +39,10 @@ zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
 # Define lfcd command
-if [ -f "$XDG_CONFIG_HOME/lf/lfcd.sh" ]; then
-	source "$XDG_CONFIG_HOME/lf/lfcd.sh"
-fi
+[ -f "$XDG_CONFIG_HOME/lf/lfcd.sh" ] && source "$XDG_CONFIG_HOME/lf/lfcd.sh"
 
 # Set lf icons
-if [ -f "$XDG_CONFIG_HOME/lf/lficons.sh" ]; then
-	source "$XDG_CONFIG_HOME/lf/lficons.sh"
-fi
+[ -f "$XDG_CONFIG_HOME/lf/lficons.sh" ] && source "$XDG_CONFIG_HOME/lf/lficons.sh"
 
 # Set starship prompt
 eval "$(starship init zsh)"
