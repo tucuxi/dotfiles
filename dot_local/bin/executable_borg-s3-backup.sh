@@ -43,7 +43,7 @@ OPERATION_STATUS=$?
 if [ $OPERATION_STATUS == 0 ]; then
 	# Clean up old backups
 	# Prune operation is not important, s3 sync is - do not exit were this to fail
-	borg prune -v --list --keep-daily=7 --keep-weekly=4 -keep-monthly=12
+	borg prune -v --list --keep-daily=7 --keep-weekly=4 --keep-monthly=12
 
 	# Sync borg repo to s3
 	printf "\n\n ** Sync to s3...\n"
