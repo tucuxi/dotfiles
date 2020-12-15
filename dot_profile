@@ -5,7 +5,7 @@ export BROWSER=firefox
 export EDITOR=vis
 export PAGER=less
 export READER=zathura
-export TERMINAL=st
+export TERMINAL=alacritty
 export VISUAL=vis
 
 # XDG directories
