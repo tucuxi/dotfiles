@@ -23,37 +23,27 @@ set scrolloff 10
 # nerd font is required for showing icons
 set icons
 
-set color256
 set drawbox
 
 # turn on file preview
 set previewer preview.sh
 
-# use enter for shell commands
 map <enter> shell
-
-# execute current file (must be executable)
-map x $$f
-
-# dedicated keys for file opener actions
-map o &mimeopen $f
-map O $mimeopen --ask $f
-
+map C chmod
 map D delete
 map R bulk-rename
+map X $$f
 
-# define a custom 'open' command
 # This command is called when current file is not a directory. You may want to
-# use either file extensions and/or mime types here. Below uses an editor for
-# text files and a file opener for the rest.
+# use either file extensions and/or mime types here.
 cmd open ${{
-    case $(file --mime-type $f -b) in
-        text/*) $EDITOR $fx;;
-        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" ;;
     esac
 }}
 
-# rename selected files
+# Rename selected files
 cmd bulk-rename ${{
     old=$(mktemp)
     new=$(mktemp)
@@ -72,14 +62,7 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
-# make sure trash folder exists
-%mkdir -p ~/.trash
-
-# move current file or selected files to trash folder
-# (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv $fx ~/.trash
-
-# delete current file or selected files (prompting)
+# Delete current file or selected files (prompting)
 cmd delete ${{
     set -f
     printf "$fx\n"
@@ -88,7 +71,18 @@ cmd delete ${{
     [ $ans = "y" ] && rm -rf $fx
 }}
 
-# extract the current file with the right command
+# Change file permissions
+cmd chmod ${{
+    printf "$fx\n"
+    printf "new mode: "
+    read ans
+    for file in "$fx"; do
+        chmod "$ans" "$file"
+    done
+    lf -remote 'send reload'
+}}
+
+# Extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
 cmd extract ${{
     set -f
@@ -102,7 +96,7 @@ cmd extract ${{
     esac
 }}
 
-# compress current file or selected files with tar and gunzip
+# Compress current file or selected files with tar and gunzip
 cmd tar ${{
     set -f
     mkdir $1
@@ -111,7 +105,7 @@ cmd tar ${{
     rm -rf $1
 }}
 
-# compress current file or selected files with zip
+# Compress current file or selected files with zip
 cmd zip ${{
     set -f
     mkdir $1
