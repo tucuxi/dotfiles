@@ -4,7 +4,6 @@
 trap "pkill -P $$" EXIT
 
 # Load resources
-
 loadresources () {
 	[ $# -eq 1 ] && [ -f "$1" ] && xrdb -merge "$1"
 }
@@ -13,7 +12,6 @@ loadresources /etc/X11/xinit/.Xresources
 loadresources $HOME/.Xresources
 
 # Load keymap modifications
-
 modifykeymap () {
 	[ $# -eq 1 ] && [ -f "$1" ] && xmodmap "$1"
 }
@@ -22,7 +20,6 @@ modifykeymap /etc/X11/xinit/.Xmodmap
 modifykeymap $HOME/.Xmodmap
 
 # Start some nice programs
-
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
 	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
 		[ -x "$f" ] && . "$f"
@@ -31,15 +28,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Load wallpaper
-
-wallpaper=$HOME/.fehbg
+wallpaper=$HOME/.config/wallpaper
 [ -x "$wallpaper" ] && . "$wallpaper" &
 
 # Start USB auto mounter
 udiskie &
 
 # Update status bar periodically
-
 while true
 do
 	xsetroot -name "$(date '+ %a %-d %b %R')"
