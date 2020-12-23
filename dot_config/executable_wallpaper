@@ -1,2 +1,2 @@
 #!/bin/sh
-xwallpaper --zoom /usr/share/backgrounds/aurora_borealis.jpg
+xwallpaper --zoom ${XDG_DATA_HOME-$HOME/.local/share}/backgrounds/wolf_howling_at_the_moon.jpg
