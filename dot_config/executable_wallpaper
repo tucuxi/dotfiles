@@ -1,2 +1,2 @@
 #!/bin/sh
-xwallpaper --zoom ${XDG_DATA_HOME-$HOME/.local/share}/backgrounds/wolf_howling_at_the_moon.jpg
+ls ${XDG_DATA_HOME-$HOME/.local/share}/backgrounds/* 2> /dev/null | shuf -n 1 | xargs -r xwallpaper --zoom 
