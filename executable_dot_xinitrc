@@ -34,8 +34,7 @@ wallpaper.sh &
 udiskie &
 
 # Update status bar periodically
-while true
-do
+while true; do
 	xsetroot -name "$(date '+ %a %-d %b %R')"
 	sleep 5
 done &
