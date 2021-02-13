@@ -2,5 +2,5 @@ configuration {
 	font: "sans-serif 12";
 	theme: "/usr/share/rofi/themes/gruvbox-dark.rasi";
 	show-icons: true;
-	icon-theme: "gruvbox-dark-gtk";
+	icon-theme: "Papirus-Dark";
 }
