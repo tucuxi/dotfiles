@@ -5,14 +5,20 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias e="$VISUAL"
 alias o="xdg-open"
-alias uma="udiskie-umount --all"
+
+# udiskie
+alias uma='udiskie-umount --all'
 
 # Use exa instead of ls and tree
-alias l="exa --icons --group-directories-first"
-alias la="exa --icons --group-directories-first -a"
-alias ll="exa --icons --group-directories-first -l"
-alias lla="exa --icons --group-directories-first -la"
-alias tree="exa --icons -T"
+alias l='exa --icons --group-directories-first'
+alias la='exa --icons --group-directories-first -a'
+alias ll='exa --icons --group-directories-first -l'
+alias lla='exa --icons --group-directories-first -la'
+alias tree='exa --icons -T'
+
+# systemd
+alias jc='journalctl -xe'
+alias sc='systemctl'
 
 # Use emacs keybindings
 bindkey -e
