@@ -8,5 +8,5 @@ case "$1" in
     *.rar) unrar l "$1";;
     *.7z) 7z l "$1";;
     *.pdf) pdftotext "$1" -;;
-    *) bat -pp --color always --line-range 1:"$2" "$1" ;;
+    *) bat -pp --color always --line-range 1:"$3" "$1" ;;
 esac
