@@ -1,10 +1,11 @@
 export GPG_TTY=$(tty)
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias e="$VISUAL"
-alias o="xdg-open"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias e='$VISUAL'
+alias h='history'
+alias o='xdg-open'
 
 # udiskie
 alias uma='udiskie-umount --all'
@@ -17,7 +18,7 @@ alias lla='exa --icons --group-directories-first -la'
 alias tree='exa --icons -T'
 
 # systemd
-alias jc='journalctl -xe'
+alias jc='journalctl -e'
 alias sc='systemctl'
 
 # Use emacs keybindings
