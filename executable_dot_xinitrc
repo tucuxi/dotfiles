@@ -30,6 +30,9 @@ fi
 # Load wallpaper
 wallpaper.sh &
 
+# Start authentication agent graphical applications
+lxsession &
+
 # Start USB auto mounter
 udiskie &
 
