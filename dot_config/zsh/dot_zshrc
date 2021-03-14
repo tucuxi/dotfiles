@@ -1,5 +1,7 @@
 export GPG_TTY=$(tty)
 
+setopt histignorealldups
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
