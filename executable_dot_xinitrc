@@ -31,7 +31,7 @@ fi
 wallpaper.sh &
 
 # Start authentication agent graphical applications
-lxsession &
+# lxsession &
 
 # Start USB auto mounter
 udiskie &
