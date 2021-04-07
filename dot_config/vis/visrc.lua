@@ -1,4 +1,6 @@
 require('vis')
+require('plugins/complete-word')
+require('plugins/complete-filename')
 require('plugins/vis-modelines')
 require('plugins/vis-commentary')
 require('plugins/vis-filetype-settings')
