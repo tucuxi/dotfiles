@@ -30,8 +30,8 @@ fi
 # Load wallpaper
 wallpaper.sh &
 
-# Start authentication agent graphical applications
-# lxsession &
+# Start authentication agent for graphical applications
+lxpolkit &
 
 # Start USB auto mounter
 udiskie &
