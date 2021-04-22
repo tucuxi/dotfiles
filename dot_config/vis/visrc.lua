@@ -6,8 +6,9 @@ require('plugins/vis-commentary')
 require('plugins/vis-filetype-settings')
 
 settings = {
-	java = { 'set autoindent', 'set expandtab', 'set tabwidth 4' },
-	yaml = { 'set autoindent', 'set expandtab', 'set tabwidth 2' }
+	java = { 'set expandtab', 'set tabwidth 4' },
+	rust = { 'set expandtab', 'set tabwidth 4' },
+	yaml = { 'set expandtab', 'set tabwidth 2' }
 }
 
 vis.events.subscribe(vis.events.INIT, function()
