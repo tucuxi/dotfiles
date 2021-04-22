@@ -1,7 +1,7 @@
 #!/bin/bash
 
 case "${1,,}" in
-    *.png|*.jpg|*.jpeg|*mkv|*.mp4|*.mp3) mediainfo "$1";;
+    *.png|*.jpg|*.jpeg|*.mkv|*.mp4|*.mp3) mediainfo "$1";;
     *.md) glow -s dark "$1";;
     *.tar*) tar tf "$1";;
     *.zip) unzip -l "$1";;
