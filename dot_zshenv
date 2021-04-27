@@ -6,7 +6,7 @@ export PATH
 # Preferred applications
 export BROWSER=firefox
 export EDITOR=vis
-export PAGER=less
+export PAGER="less -R"
 export READER=zathura
 export TERMINAL=alacritty
 export VISUAL=vis
