@@ -1,0 +1,31 @@
+#
+# wm independent hotkeys
+#
+
+# terminal
+super + t
+	$TERMINAL
+
+# web browser
+super + w
+	$BROWSER
+
+# screen shot
+Print
+	scrot -e 'notify-send "Screen captured" "$f"'
+
+# make sxhkd reload its configuration files
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# increase audio volume
+XF86AudioRaiseVolume
+	volume.sh up
+
+# decrease audio volume
+XF86AudioLowerVolume
+	volume.sh down
+
+# toggle mute
+XF86AudioMute
+	volume.sh mute

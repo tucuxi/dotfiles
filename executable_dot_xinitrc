@@ -30,6 +30,9 @@ fi
 # Load wallpaper
 wallpaper.sh &
 
+# Start hotkey daemon
+sxhkd &
+
 # Start authentication agent for graphical applications
 lxpolkit &
 
