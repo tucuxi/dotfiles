@@ -2,6 +2,7 @@ export PATH=$PATH:$HOME/.local/bin
 
 # Preferred applications
 export BROWSER=firefox
+export DIFFPROG=meld
 export EDITOR=vis
 export PAGER="less -R"
 export READER=zathura
