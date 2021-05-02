@@ -3,8 +3,4 @@ typeset -U PATH path
 path=("$path[@]" "$HOME/.local/bin")
 export PATH
 
-export HISTFILE="$XDG_CACHE_HOME/zsh_history"
-export HISTSIZE=2000
-export SAVEHIST=2000
-
 # vim: ft=bash
