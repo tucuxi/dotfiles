@@ -1,6 +1,3 @@
-# Initialize ssh-agent
-# eval $(keychain --eval --quiet --timeout 240 --noask)
-
 # Start X
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec startx 2> $HOME/.xsession-errors

@@ -23,7 +23,4 @@ export LESSHISTFILE="-"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-# Initialize ssh-agent
-eval $(keychain --eval --quiet --timeout 240 --noask)
-
 # vim: ft=bash
