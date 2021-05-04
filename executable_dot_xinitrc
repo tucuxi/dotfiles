@@ -3,23 +3,29 @@
 # Stop child processes before exiting
 trap "pkill -P $$" EXIT
 
-# Load resources
+# Load resources if available
 loadresources () {
 	[ $# -eq 1 ] && [ -f "$1" ] && xrdb -merge "$1"
+}
+
+# Load keymap modifications if available
+modifykeymap () {
+	[ $# -eq 1 ] && [ -f "$1" ] && xmodmap "$1"
+}
+
+# Start program in background if available
+launch () {
+	if [ $# -eq 1 ] && [ -x $(command -v "$1") ]; then
+		"$1" &
+	fi
 }
 
 loadresources /etc/X11/xinit/.Xresources
 loadresources $HOME/.Xresources
 
-# Load keymap modifications
-modifykeymap () {
-	[ $# -eq 1 ] && [ -f "$1" ] && xmodmap "$1"
-}
-
 modifykeymap /etc/X11/xinit/.Xmodmap
 modifykeymap $HOME/.Xmodmap
 
-# Start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
 	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
 		[ -x "$f" ] && . "$f"
@@ -27,22 +33,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 	unset f
 fi
 
-launch () {
-	if [ $# -eq 1 ] && command -v "$1" >/dev/null 2>&1; then
-		"$1" &
-	fi
-}
-
-# Load wallpaper
+# Autostart
 launch wallpaper.sh
-
-# Start hotkey daemon
 launch sxhkd
-
-# Start authentication agent for graphical applications
 launch lxpolkit
-
-# Start USB auto mounter
 launch udiskie
 
 # Update status bar periodically
