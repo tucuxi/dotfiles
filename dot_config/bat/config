@@ -1,2 +1,2 @@
---theme="gruvbox-dark"
---plain
+--theme=gruvbox-dark
+--style=grid,numbers,changes
