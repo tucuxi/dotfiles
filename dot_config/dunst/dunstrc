@@ -17,16 +17,22 @@
     # Markup is allowed
     format = "<b>%s</b> %p\n%b"
 
-    word_wrap = no
     show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    stack_duplicates = yes
+    hide_duplicate_count = false
+    show_indicators = yes
     ignore_newline = no
     transparency = 15
     idle_threshold = 120
     follow = keyboard
-    geometry = "0x4-4+32"
+    geometry = "300x5-4+32"
     padding = 8
     horizontal_padding = 10
     icon_position = left
+    min_icon_size = 0
+    max_icon_size = 32
     icon_path = /usr/share/icons/Papirus-Dark/24x24/status:/usr/share/icons/Papirus-Dark/24x24/actions:/usr/share/icons/Papirus-Dark/24x24/devices
     browser = /usr/bin/firefox -new-tab
 
