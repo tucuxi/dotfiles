@@ -9,6 +9,7 @@ alias ....='cd ../../..'
 alias e='$VISUAL'
 alias h='history'
 alias o='xdg-open'
+alias sudo='doas'
 
 # udiskie
 alias uma='udiskie-umount --all'
@@ -39,6 +40,11 @@ complete -C aws_completer aws
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^X^E' edit-command-line
+
+# Better autosuggest
+bindkey "^ " autosuggest-execute
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 function sourceIfExists {
 	[ -f "$1" ] && source "$1"
