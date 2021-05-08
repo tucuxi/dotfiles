@@ -41,18 +41,17 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
-# Better autosuggest
-function sourceIfExists {
-	[ -f "$1" ] && source "$1"
-}
-
 # Enable autosuggestions plugin
 if [ -f "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
 	source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-	bindkey "^ " autosuggest-execute
-	bindkey "^[[1;5D" backward-word
-	bindkey "^[[1;5C" forward-word
+	bindkey "^[[1;5B" autosuggest-execute # ctrl-down
+	bindkey "^[[1;5D" backward-word       # ctrl-left
+	bindkey "^[[1;5C" forward-word        # ctrl-right
 fi
+
+function sourceIfExists {
+	[ -f "$1" ] && source "$1"
+}
 
 # Enable syntax-highlighting plugin
 sourceIfExists "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
