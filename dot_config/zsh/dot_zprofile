@@ -1,3 +1,5 @@
+umask 027
+
 # Start X
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec startx 2> $HOME/.xsession-errors
