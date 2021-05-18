@@ -9,8 +9,13 @@
 	coloring = highlightRecent
 [branch]
 	autosetuprebase = always
+[commit]
+	gpgsign = true
 [core]
 	autocrlf = input
+[diff]
+	renameLimit = 10000
+	tool = meld
 [init]
 	defaultBranch = main
 [user]
