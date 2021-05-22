@@ -31,7 +31,7 @@ printf "\n\n ** Starting backup ${BACKUP_NAME} of directory ${BORG_S3_ORIGINAL}.
 # Local borg backup
 borg create ::${BACKUP_NAME} \
 	${BORG_S3_BACKUP_ORIGIN} \
-	--compression zlib,6
+	--compression zstd,19
 
 # Define and store the backup's exit status
 OPERATION_STATUS=$?
@@ -53,7 +53,7 @@ fi
 if [ $OPERATION_STATUS == 0 ]; then
 	STATUS_MESSAGE="Backup successful"
 else
-	STATUS_MESSAGE="Backup failed because reasons - see output"
+	STATUS_MESSAGE="Backup failed ($OPERATION_STATUS)"
 fi
 
 # Send desktop notification and exit appropriately if supported by the system - this will probably
