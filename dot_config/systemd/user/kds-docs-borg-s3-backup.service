@@ -1,5 +1,5 @@
 [Unit]
-Description=Back up ~/Documents to S3
+Description=Backup ~/Documents to S3
 
 [Service]
 Type=oneshot
