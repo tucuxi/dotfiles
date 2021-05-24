@@ -7,6 +7,7 @@ require('plugins/vis-filetype-settings')
 
 settings = {
 	java = { 'set expandtab', 'set tabwidth 4' },
+	go = { 'set expandtab', 'set tabwidth 4' },
 	rust = { 'set expandtab', 'set tabwidth 4' },
 	yaml = { 'set expandtab', 'set tabwidth 2' }
 }
