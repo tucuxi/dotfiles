@@ -45,16 +45,16 @@
 [urgency_low]
     background = "#282828"
     foreground = "#8a8a8a"
-    timeout = 4
+    timeout = 10
 
 [urgency_normal]
     background = "#282828"
     foreground = "#dab997"
-    timeout = 4
+    timeout = 10
 
 [urgency_critical]
     background = "#282828"
     foreground = "#fb4934"
-    timeout = 8
+    timeout = 60
 
 # vim: ft=ini
