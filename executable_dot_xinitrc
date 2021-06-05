@@ -42,7 +42,7 @@ launch udiskie
 # Update status bar periodically
 while true; do
 	xsetroot -name "$(date '+ %a %-d %b %R')"
-	sleep 5
+	sleep 10
 done &
 
 exec dwm
