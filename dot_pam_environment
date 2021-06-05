@@ -9,7 +9,7 @@ DIFFPROG			DEFAULT=meld
 EDITOR				DEFAULT=vis
 PAGER				DEFAULT="less -R"
 READER				DEFAULT=zathura
-TERMINAL			DEFAULT=alacritty
+TERMINAL			DEFAULT=kitty
 VISUAL				DEFAULT=vis
 
 # zsh
