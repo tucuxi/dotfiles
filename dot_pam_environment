@@ -1,7 +1,7 @@
 # XDG directories
-XDG_CONFIG_HOME			DEFAULT=@{HOME}/.config
-XDG_CACHE_HOME			DEFAULT=@{HOME}/.cache
-XDG_DATA_HOME			DEFAULT=@{HOME}/.local/share
+XDG_CONFIG_HOME                 DEFAULT=@{HOME}/.config
+XDG_CACHE_HOME                  DEFAULT=@{HOME}/.cache
+XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
 
 # Preferred applications
 BROWSER				DEFAULT=firefox
@@ -12,20 +12,17 @@ READER				DEFAULT=zathura
 TERMINAL			DEFAULT=kitty
 VISUAL				DEFAULT=vis
 
-# zsh
-ZDOTDIR				DEFAULT=@{HOME}/.config/zsh
-
 # gpg
-SSH_AUTH_SOCK			DEFAULT="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+SSH_AUTH_SOCK                   DEFAULT="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 
 # Application settings
-_JAVA_AWT_WM_NONREPARENTING	DEFAULT=1
-_JAVA_OPTIONS			DEFAULT=-Dawt.useSystemAAFontSettings=on
-BC_ENV_ARGS			DEFAULT=-q
-FZF_DEFAULT_COMMAND		DEFAULT="fd --type f"
-LESSHISTFILE			DEFAULT="-"
-HISTFILE			DEFAULT="${XDG_CACHE_HOME}/history"
-HISTSIZE			DEFAULT=2000
-MANPAGER			DEFAULT="sh -c 'col -bx | bat -l man -p'"
-QT_STYLE_OVERRIDE		DEFAULT=kvantum
-SAVEHIST			DEFAULT=2000
+_JAVA_AWT_WM_NONREPARENTING     DEFAULT=1
+_JAVA_OPTIONS                   DEFAULT=-Dawt.useSystemAAFontSettings=on
+BC_ENV_ARGS                     DEFAULT=-q
+FZF_DEFAULT_COMMAND             DEFAULT="fd --type f"
+LESSHISTFILE                    DEFAULT="-"
+HISTFILE                        DEFAULT="${XDG_CACHE_HOME}/history"
+HISTSIZE                        DEFAULT=2000
+MANPAGER                        DEFAULT="sh -c 'col -bx | bat -l man -p'"
+QT_STYLE_OVERRIDE               DEFAULT=kvantum
+SAVEHIST                        DEFAULT=2000

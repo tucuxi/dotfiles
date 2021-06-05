@@ -49,7 +49,7 @@ if [ -f "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; 
 	bindkey "^[[1;5C" forward-word        # ctrl-right
 fi
 
-function sourceIfExists {
+sourceIfExists {
 	[ -f "$1" ] && source "$1"
 }
 
