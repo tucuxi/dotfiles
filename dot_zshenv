@@ -1,6 +1,0 @@
-# Eliminate duplicates in PATH and add .local/bin
-typeset -U PATH path
-path=("$path[@]" "$HOME/.local/bin")
-export PATH
-
-# vim: ft=bash
