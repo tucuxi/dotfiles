@@ -2,10 +2,6 @@
 # wm independent hotkeys
 #
 
-# terminal
-super + t
-	$TERMINAL
-
 # web browser
 super + w
 	$BROWSER
