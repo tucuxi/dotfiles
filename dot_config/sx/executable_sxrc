@@ -4,27 +4,32 @@
 trap "pkill -P $$" EXIT
 
 # Load resources if available
-loadresources () {
-	[ $# -eq 1 ] && [ -f "$1" ] && xrdb -merge "$1"
+loadresources() {
+	while [ "$#" != "0" ]; do
+		[ -f "$1" ] && xrdb -merge "$1"
+		shift
+	done
 }
 
 # Load keymap modifications if available
-modifykeymap () {
-	[ $# -eq 1 ] && [ -f "$1" ] && xmodmap "$1"
+modifykeymap() {
+	while [ "$#" != "0" ]; do
+		[ -f "$1" ] && xmodmap "$1"
+		shift
+	done
 }
 
 # Start program in background if available
-launch () {
-	if [ $# -eq 1 ] && [ -x $(command -v "$1") ]; then
-		"$1" &
-	fi
+launch() {
+	while [ "$#" != "0" ]; do
+		[ $(command -v "$1" 2>/dev/null) ] && "$1" &
+		shift
+	done
 }
 
-loadresources /etc/X11/xinit/.Xresources
-loadresources $HOME/.Xresources
+loadresources /etc/X11/xinit/.Xresources $HOME/.Xresources
 
-modifykeymap /etc/X11/xinit/.Xmodmap
-modifykeymap $HOME/.Xmodmap
+modifykeymap /etc/X11/xinit/.Xmodmap $HOME/.Xmodmap
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
 	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
@@ -34,10 +39,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Autostart
-launch wallpaper.sh
-launch sxhkd
-launch lxpolkit
-launch udiskie
+launch wallpaper.sh sxhkd lxpolkit udiskie
 
 # Update status bar periodically
 while true; do
