@@ -1,6 +1,7 @@
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+setopt extended_glob
 setopt histignorealldups
 
 alias ..='cd ..'
