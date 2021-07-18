@@ -19,11 +19,13 @@ modifykeymap() {
 	done
 }
 
-# Start program in background if available
+# Start programs in background if available
 launch() {
 	while [ "$#" != "0" ]; do
-		[ $(command -v "$1" 2>/dev/null) ] && "$1" &
-		shift
+		if [ $(command -v "$1" 2> /dev/null) ]; then
+			"$1" &
+			shift
+		fi
 	done
 }
 
