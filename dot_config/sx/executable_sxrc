@@ -24,8 +24,8 @@ launch() {
 	while [ "$#" != "0" ]; do
 		if [ $(command -v "$1" 2> /dev/null) ]; then
 			"$1" &
-			shift
 		fi
+		shift
 	done
 }
 
