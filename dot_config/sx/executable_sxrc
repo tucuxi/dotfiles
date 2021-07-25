@@ -21,12 +21,9 @@ modifykeymap() {
 
 # Start programs in background if available
 launch() {
-	while [ "$#" != "0" ]; do
-		if [ $(command -v "$1" 2> /dev/null) ]; then
-			"$1" &
-		fi
-		shift
-	done
+	if [ "$#" != "0" -a $(command -v "$1" 2> /dev/null) ]; then
+		"$*" &
+	fi
 }
 
 loadresources /etc/X11/xinit/.Xresources $HOME/.Xresources
@@ -41,7 +38,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Autostart
-launch wallpaper.sh sxhkd lxpolkit udiskie
+launch wallpaper.sh
+launch sxhkd
+launch lxpolkit
+launch udiskie
+launch autocutsel -fork
+launch autocutsel -selection PRIMARY -fork
 
 # Update status bar periodically
 while true; do
