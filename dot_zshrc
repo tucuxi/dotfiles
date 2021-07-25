@@ -10,7 +10,7 @@ alias ....='cd ../../..'
 alias e='$VISUAL'
 alias h='history'
 alias o='xdg-open'
-alias sudo='doas'
+alias sudo='doas --'
 
 # udiskie
 alias uma='udiskie-umount --all'
