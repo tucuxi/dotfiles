@@ -21,7 +21,7 @@ modifykeymap() {
 
 # Start programs in background if available
 launch() {
-	if [ "$#" != "0" -a $(command -v "$1" 2> /dev/null) ]; then
+	if [ "$#" != "0" -a $(command -v "$1" 2>/dev/null) ]; then
 		$* &
 	fi
 }
@@ -40,7 +40,6 @@ fi
 # Autostart
 launch wallpaper.sh
 launch sxhkd
-launch lxpolkit
 launch udiskie
 
 # Update status bar periodically
