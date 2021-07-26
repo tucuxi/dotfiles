@@ -22,7 +22,7 @@ modifykeymap() {
 # Start programs in background if available
 launch() {
 	if [ "$#" != "0" -a $(command -v "$1" 2> /dev/null) ]; then
-		"$*" &
+		$* &
 	fi
 }
 
@@ -42,8 +42,6 @@ launch wallpaper.sh
 launch sxhkd
 launch lxpolkit
 launch udiskie
-launch autocutsel -fork
-launch autocutsel -selection PRIMARY -fork
 
 # Update status bar periodically
 while true; do
