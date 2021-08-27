@@ -25,3 +25,11 @@ XF86AudioLowerVolume
 # toggle mute
 XF86AudioMute
 	volume.sh mute
+
+# close topmost notification
+ctrl + Delete
+	dunstctl close
+
+# close all notifications currently displayed
+ctrl + shift + Delete
+	dunstctl close-all

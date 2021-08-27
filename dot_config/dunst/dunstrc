@@ -37,8 +37,8 @@
     browser = /usr/bin/firefox -new-tab
 
 [shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
+    close = ctrl+del
+    close_all = ctrl+shift+del
     history = ctrl+grave
     context = ctrl+shift+period
 
