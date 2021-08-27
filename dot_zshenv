@@ -1,0 +1,29 @@
+# XDG directories
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+
+# Preferred applications
+export BROWSER="firefox"
+export DIFFPROG="meld"
+export EDITOR="vis"
+export PAGER="less -R"
+export READER="llpp"
+export TERMINAL="kitty"
+export VISUAL="vis"
+
+# gpg
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+
+# Application settings
+export _JAVA_AWT_WM_NONREPARENTING="1"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+export BC_ENV_ARGS="-q"
+export FZF_DEFAULT_COMMAND="fd --type f"
+export LESSHISTFILE="-"
+export HISTFILE="${XDG_CACHE_HOME}/history"
+export HISTSIZE="2000"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export QT_STYLE_OVERRIDE="kvantum"
+export SAVEHIST="2000"
