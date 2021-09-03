@@ -36,12 +36,6 @@
     icon_path = /usr/share/icons/Papirus-Dark/24x24/status:/usr/share/icons/Papirus-Dark/24x24/actions:/usr/share/icons/Papirus-Dark/24x24/devices
     browser = /usr/bin/firefox -new-tab
 
-[shortcuts]
-    close = ctrl+del
-    close_all = ctrl+shift+del
-    history = ctrl+grave
-    context = ctrl+shift+period
-
 [urgency_low]
     background = "#282828"
     foreground = "#8a8a8a"
