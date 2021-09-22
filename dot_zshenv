@@ -9,7 +9,7 @@ export BROWSER="firefox"
 export DIFFPROG="meld"
 export EDITOR="vis"
 export PAGER="less -R"
-export READER="llpp"
+export READER="zathura"
 export TERMINAL="kitty"
 export VISUAL="vis"
 
