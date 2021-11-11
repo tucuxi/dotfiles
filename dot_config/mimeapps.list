@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=llpp.desktop
+application/pdf=org.pwmt.zathura.desktop
 image/jpeg=sxiv.desktop
 image/png=sxiv.desktop
 x-scheme-handler/eclipse+command=_usr_lib_papyrus_.desktop
