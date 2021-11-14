@@ -1,4 +1,5 @@
 [alias]
+	aa = add --all -v
 	ci = commit
 	co = checkout
 	lg = log --color --graph --branches --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
