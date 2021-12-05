@@ -8,7 +8,10 @@ super + w
 
 # screen shot
 Print
-	scrot -e 'notify-send "Screen captured" "$f"'
+	flameshot screen -p $HOME/Screenshots
+
+shift + Print
+	flameshot gui
 
 # make sxhkd reload its configuration files
 super + Escape
