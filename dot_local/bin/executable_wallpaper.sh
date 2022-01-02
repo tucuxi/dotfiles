@@ -1,37 +1,47 @@
 #!/bin/bash
 
-# Requires: curl, imagemagick, jq
-
-display_image () {
-	local resolution
-	resolution="$(xrandr | awk '/*/ {print $1}')"
-	display -window root -resize "$resolution^" -gravity center -extent "$resolution" "$1"
-}
-
-load_image () {
-	curl --silent --fail --location "$image_url" --output "$1"
-}
-
-set_image_url_bing () {
-	local image_path
-	image_path="$(curl -s 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=4' | jq -r '.images[].url' | shuf -n 1)"
-	image_url="https://bing.com$image_path"
-}
-
-set_image_url_unsplash () {
-	image_url="https://source.unsplash.com/random/1920x1080?nature"
-}
+# Requires: curl, imagemagick, jq, xrandr
 
 image_directory="${XDG_DATA_HOME-$HOME/.local/share}/backgrounds"
 next_image="${image_directory}/random-next.jpg"
 current_image="${image_directory}/random.jpg"
 
-[ -f "$next_image" ] && mv "$next_image" "$current_image" 
-[ -f "$current_image" ] && display_image "$current_image"
+cycle_image () {
+	if [ -s "$next_image" ]; then
+		cp "$next_image" "$current_image" 
+	fi
+	if [ -s "$current_image" ]; then
+		local resolution
+		resolution="$(xrandr | awk '/*/ {print $1}')"
+		display -window root -resize "$resolution^" -gravity center -extent "$resolution" "$current_image"
+	fi
+}
 
-sleep 2 # increase success rate if WiFi connection is still being established
+preload_next_image () {
+	local image
 
-temp_file=$(mktemp)
-set_image_url_bing
-load_image "$temp_file"
-[ $? -eq 0 ] && [ -s "$temp_file" ] && mv "$temp_file" "$next_image"
+	case "$1" in
+		bing)
+			sleep 2 # if establishing network connection is slow, else remove this line
+			local host_path
+			host_path="$(curl -s 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=4' | jq -r '.images[].url' | shuf -n 1)"
+			image=$(mktemp)
+			curl -fsL "https://bing.com$host_path" -o "$image"
+			;;
+		unsplash)
+			sleep 2 # if establishing network connection is slow, else remove this line
+			image=$(mktemp)
+			curl -fsL "https://source.unsplash.com/random/1920x1080?nature" -o "$image"
+			;;
+		*)
+			image="$(find "$image_directory" -type f -name "*.jpg" -o -name "*.jpeg" | shuf -n 1)"
+			;;
+	esac
+	
+	if [ -n "$image" ] && [ -s "$image" ]; then
+		cp "$image" "$next_image"
+	fi
+}
+
+cycle_image
+preload_next_image bing
