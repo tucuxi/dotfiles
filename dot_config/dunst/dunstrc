@@ -27,7 +27,9 @@
     transparency = 15
     idle_threshold = 120
     follow = keyboard
-    geometry = "300x5-4+32"
+    width = 300
+    height = 200
+    offset = 8x32
     padding = 8
     horizontal_padding = 10
     icon_position = left
