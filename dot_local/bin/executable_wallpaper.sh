@@ -34,7 +34,7 @@ preload_next_image () {
 			curl -fsL "https://source.unsplash.com/random/1920x1080?nature" -o "$image"
 			;;
 		*)
-			image="$(find "$image_directory" -type f -name "*.jpg" -o -name "*.jpeg" | shuf -n 1)"
+			image="$(find "$image_directory" -type f \( -name '*.jpg' -o -name '*.jpeg' \) | shuf -n 1)"
 			;;
 	esac
 	
