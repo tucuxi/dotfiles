@@ -10,6 +10,9 @@ cycle_image () {
 	if [ -s "$next_image" ]; then
 		cp "$next_image" "$current_image" 
 	fi
+}
+
+display_image () {
 	if [ -s "$current_image" ]; then
 		local resolution
 		resolution="$(xrandr | awk '/*/ {print $1}')"
@@ -24,7 +27,7 @@ preload_next_image () {
 		bing)
 			sleep 2 # if establishing network connection is slow, else remove this line
 			local host_path
-			host_path="$(curl -s 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=4' | jq -r '.images[].url' | shuf -n 1)"
+			host_path="$(curl -s 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1' | jq -r '.images[].url')"
 			image=$(mktemp)
 			curl -fsL "https://bing.com$host_path" -o "$image"
 			;;
@@ -44,4 +47,5 @@ preload_next_image () {
 }
 
 cycle_image
+display_image
 preload_next_image bing
