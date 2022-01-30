@@ -8,10 +8,16 @@ super + w
 
 # screen shot
 Print
-	flameshot screen -p $HOME/Screenshots
+	maim -q -u $HOME/Screenshots/$(date +%Y%m%d-%H%M%S-desktop).png
 
 shift + Print
-	flameshot gui
+	maim -q -s -b 2 -u $HOME/Screenshots/$(date +%Y%m%d-%H%M%S-selection).png
+
+ctrl + Print
+	maim -q -u | xclip -selection clipboard -t image/png
+
+ctrl + shift + Print
+	maim -q -s -b 2 -u | xclip -selection clipboard -t image/png
 
 # make sxhkd reload its configuration files
 super + Escape
