@@ -8,16 +8,16 @@ super + w
 
 # screen shot
 Print
-	maim -q -u $HOME/Screenshots/$(date +%Y%m%d-%H%M%S-desktop).png
+	screenshot.sh
 
 shift + Print
-	maim -q -s -b 2 -u $HOME/Screenshots/$(date +%Y%m%d-%H%M%S-selection).png
+	screenshot.sh -s
 
 ctrl + Print
-	maim -q -u | xclip -selection clipboard -t image/png
+	screenshot.sh -c
 
 ctrl + shift + Print
-	maim -q -s -b 2 -u | xclip -selection clipboard -t image/png
+	screenshot.sh -cs
 
 # make sxhkd reload its configuration files
 super + Escape
