@@ -21,8 +21,8 @@ modifykeymap() {
 
 # Start programs in background if available
 launch() {
-	if [ "$#" != "0" -a $(command -v "$1" 2>/dev/null) ]; then
-		$* &
+	if [ "$#" != "0" ] && [ $(command -v "$1" 2>/dev/null) ]; then
+		"$@" &
 	fi
 }
 
