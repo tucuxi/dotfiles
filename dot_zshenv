@@ -7,11 +7,11 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 # Preferred applications
 export BROWSER="firefox"
 export DIFFPROG="meld"
-export EDITOR="vis"
+export EDITOR="helix"
 export PAGER="less -R"
 export READER="zathura"
 export TERMINAL="kitty"
-export VISUAL="vis"
+export VISUAL="helix"
 
 # gpg
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
