@@ -1,0 +1,5 @@
+theme = "gruvbox"
+
+[keys.normal]
+"$" = "goto_line_end"
+"G" = "goto_last_line"
