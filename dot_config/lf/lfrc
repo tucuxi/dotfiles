@@ -68,7 +68,7 @@ cmd delete ${{
     printf "$fx\n"
     printf "delete? [y/N] "
     read ans
-    [ -n "$ans" ] && [ "$ans" == "y" ] && rm -rf $fx
+    [ "$ans" == "y" ] && rm -rf $fx
 }}
 
 # Change file permissions
