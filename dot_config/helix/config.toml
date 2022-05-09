@@ -1,5 +1,9 @@
 theme = "gruvbox"
 
+[editor]
+line-number = "relative"
+
 [keys.normal]
+";" = "repeat_last_motion"
 "$" = "goto_line_end"
 "G" = "goto_last_line"
