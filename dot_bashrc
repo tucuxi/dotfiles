@@ -12,6 +12,6 @@ alias ls='ls --color=auto'
 
 eval "$(starship init bash)"
 
-source <(kitty + complete setup bash)
+# source <(kitty + complete setup bash)
 
 # vim: ft=bash
