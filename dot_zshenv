@@ -10,7 +10,7 @@ export DIFFPROG="meld"
 export EDITOR="helix"
 export PAGER="less -R"
 export READER="zathura"
-export TERMINAL="kitty"
+export TERMINAL="alacritty"
 export VISUAL="helix"
 
 # gpg
