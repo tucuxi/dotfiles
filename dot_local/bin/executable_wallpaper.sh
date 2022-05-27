@@ -2,6 +2,7 @@
 
 # Requires: curl, imagemagick, jq, xrandr
 
+image_source="bing"
 image_directory="${XDG_DATA_HOME-$HOME/.local/share}/backgrounds"
 next_image="${image_directory}/random-next.jpg"
 current_image="${image_directory}/random.jpg"
@@ -23,7 +24,7 @@ display_image () {
 preload_next_image () {
 	local image
 
-	case "$1" in
+	case "$image_source" in
 		bing)
 			sleep 2 # if establishing network connection is slow, else remove this line
 			local host_path
@@ -46,6 +47,10 @@ preload_next_image () {
 	fi
 }
 
+# Ensure that there is an image initially.
+if [ ! -s "$next_image" ]; then
+	preload_next_image
+fi
 cycle_image
 display_image
-preload_next_image bing
+preload_next_image
