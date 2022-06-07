@@ -39,6 +39,7 @@ fi
 
 # Autostart
 launch wallpaper.sh
+launch redshift
 launch sxhkd
 launch udiskie
 
