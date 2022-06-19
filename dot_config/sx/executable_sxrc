@@ -41,6 +41,8 @@ fi
 
 dex -a
 
+systemctl --user start redshift.service
+
 launch wallpaper.sh
 launch sxhkd
 launch udiskie
