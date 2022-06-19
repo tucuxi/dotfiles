@@ -43,7 +43,6 @@ systemctl --user start redshift.service
 
 launch wallpaper.sh
 launch sxhkd
-launch udiskie
 
 # Update status bar periodically
 while true; do
