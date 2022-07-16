@@ -5,13 +5,11 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # Preferred applications
-export BROWSER="firefox"
-export DIFFPROG="meld"
-export EDITOR="helix"
+: "${EDITOR:=helix}" "${VISUAL:=helix}" "${TERMINAL:=alacritty}"
+export EDITOR VISUAL TERMINAL
+: "${BROWSER:=firefox}" "${DIFFPROG:=meld}" "${READER:=zathura}" 
+export BROWSER DIFFPROG READER
 export PAGER="less -R"
-export READER="zathura"
-export TERMINAL="alacritty"
-export VISUAL="helix"
 
 # gpg
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
