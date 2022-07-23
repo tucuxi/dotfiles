@@ -3,6 +3,8 @@ typeset -U PATH path
 path=("$path[@]" "$HOME/.local/bin")
 export PATH
 
+umask 027
+
 # Start X
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	mkdir -p ${XDG_STATE_HOME:=$HOME/.local/state}/sx
