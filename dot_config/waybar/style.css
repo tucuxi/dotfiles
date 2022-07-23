@@ -19,25 +19,23 @@ window#waybar.empty {
     background-color: transparent;
 }
 
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-
 #tags button {
     color: #ebddb2;
     padding: 0 4px;
 }
 
 #tags button.occupied {
-    background-color: #504945;    
+    background-color: #665c54;    
 }
 
 #tags button.focused {
+    color: #282828;
     background-color: #d79921;
     
 }
 
 #tags button.urgent {
+    color: #282828;
     background-color: #cc24d1;
 }
 
