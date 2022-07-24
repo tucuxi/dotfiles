@@ -4,7 +4,8 @@
 # documentation.
 
 waybar &
-swaybg -i $HOME/.local/share/backgrounds/random.jpg -m fill &
+swaybg -i $HOME/.local/share/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
+lxsession &
 
 riverctl map normal Super Return spawn alacritty
 riverctl map normal Super Q close
@@ -119,14 +120,14 @@ done
 
 # Set background and border color
 riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
+riverctl border-color-focused 0xd79921
 riverctl border-color-unfocused 0x586e75
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 
 # Make certain views start floating
-riverctl float-filter-add app-id float
+riverctl float-filter-add app-id pavucontrol
 riverctl float-filter-add title "popup title with spaces"
 
 # Set app-ids and titles of views which should use client side decorations
