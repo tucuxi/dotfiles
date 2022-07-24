@@ -4,8 +4,7 @@
 # documentation.
 
 waybar &
-swaybg -i $HOME/.local/share/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
-lxsession &
+swaybg -i $XDG_DATA_HOME/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
 
 riverctl map normal Super Return spawn alacritty
 riverctl map normal Super Q close
