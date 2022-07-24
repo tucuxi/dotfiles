@@ -1,7 +1,7 @@
 [global]
     frame_width = 1
-    frame_color = "#dab997"
     separator_color = "#dab997"
+    background = "#282828"
     font = "sans-serif 9"
     markup = full
 
@@ -24,7 +24,7 @@
     hide_duplicate_count = false
     show_indicators = yes
     ignore_newline = no
-    transparency = 15
+    transparency = 20
     idle_threshold = 120
     follow = keyboard
     width = 300
@@ -39,18 +39,18 @@
     browser = /usr/bin/firefox -new-tab
 
 [urgency_low]
-    background = "#282828"
     foreground = "#8a8a8a"
+    frame_color = "#8a8a8a"
     timeout = 10
 
 [urgency_normal]
-    background = "#282828"
     foreground = "#dab997"
+    frame_color = "#dab997"
     timeout = 10
 
 [urgency_critical]
-    background = "#282828"
     foreground = "#fb4934"
+    frame_color = "#fb4934"
     timeout = 60
 
 # vim: ft=ini
