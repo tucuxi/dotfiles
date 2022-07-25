@@ -25,7 +25,8 @@ window#waybar.empty {
 }
 
 #tags button.occupied {
-    background-color: #665c54;    
+    color: #282828;
+    background-color: #7c6f64;    
 }
 
 #tags button.focused {
