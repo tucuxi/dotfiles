@@ -3,6 +3,11 @@
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
 
+export XDG_CURRENT_DESKTOP=river
+
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
 waybar &
 swaybg -i $XDG_DATA_HOME/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
 
@@ -82,7 +87,7 @@ riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
 # Custom mappings
 riverctl map normal Super P  spawn 'wofi -m -S drun'
-riverctl map normal Super W  spawn "$BROWSER"
+riverctl map normal Super W  spawn 'MOZ_ENABLE_WAYLAND=1 firefox'
 
 # Declare a passthrough mode. This mode has only a single mapping to return to
 # normal mode. This makes it useful for testing a nested wayland compositor
