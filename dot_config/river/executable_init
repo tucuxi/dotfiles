@@ -3,11 +3,6 @@
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
 
-export XDG_CURRENT_DESKTOP=river
-
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-
 waybar &
 swaybg -i $XDG_DATA_HOME/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
 
