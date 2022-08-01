@@ -10,6 +10,7 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 waybar &
 swaybg -i $XDG_DATA_HOME/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
+udiskie &
 
 riverctl map normal Super Return spawn alacritty
 riverctl map normal Super Q close
