@@ -1,9 +1,7 @@
 # Eliminate duplicates in PATH and add .local/bin
 typeset -U PATH path
-path=("$path[@]" "$HOME/.local/bin")
+path=($path[@] "$HOME/.local/bin" "$GOPATH/bin")
 export PATH
-
-umask 027
 
 # Start X
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

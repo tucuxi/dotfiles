@@ -1,5 +1,3 @@
-umask 027
-
 export PATH=$PATH:$HOME/.local/bin
 
 # vim: ft=bash
