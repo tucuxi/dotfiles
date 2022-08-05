@@ -26,3 +26,7 @@ export HISTSIZE="2000"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export QT_STYLE_OVERRIDE="kvantum"
 export SAVEHIST="2000"
+
+# Wayland
+export XKB_DEFAULT_LAYOUT=us
+export XKB_DEFAULT_OPTIONS=compose:rctrl
