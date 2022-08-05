@@ -9,7 +9,7 @@ systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 waybar &
-swaybg -i $XDG_DATA_HOME/backgrounds/wolf_howling_at_the_moon.jpg -m fill &
+swaybg -i $XDG_DATA_HOME/backgrounds/natgeo_104832300.jpg -m fill &
 udiskie &
 
 riverctl map normal Super Return spawn alacritty
@@ -133,6 +133,7 @@ riverctl set-repeat 50 300
 
 # Make certain views start floating
 riverctl float-filter-add app-id pavucontrol
+riverctl float-filter-add app-id udiskie
 riverctl float-filter-add title "popup title with spaces"
 
 # Set app-ids and titles of views which should use client side decorations
