@@ -42,8 +42,7 @@ window#waybar.empty {
 
 #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network,
 #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #language, #mpd {
-    padding: 0 10px;
-    background-color: #3c3836;
+    padding: 0 4px;
 }
 
 #window {
