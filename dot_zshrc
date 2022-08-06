@@ -10,10 +10,6 @@ alias ....='cd ../../..'
 alias e='$VISUAL'
 alias h='history'
 alias o='xdg-open'
-alias sudo='doas --'
-
-# udiskie
-alias uma='udiskie-umount --all'
 
 # Use exa instead of ls and tree
 alias l='exa --icons --group-directories-first -F'
