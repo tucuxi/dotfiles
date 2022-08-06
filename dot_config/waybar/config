@@ -7,10 +7,10 @@
     // Choose the order of the modules
     "modules-left": ["river/tags"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "clock", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "tray"],
     "keyboard-state": {
         "numlock": true,
-        "capslock": true,
+        "capslock": false,
         "format": "{name} {icon}",
         "format-icons": {
             "locked": "",
@@ -125,4 +125,3 @@
         "on-click": "pavucontrol"
     }
 }
-
