@@ -20,6 +20,7 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export BC_ENV_ARGS="-q"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export GOPATH=${HOME}/go
+export GRIM_DEFAULT_DIR="${HOME}/Screenshots"
 export LESSHISTFILE="-"
 export HISTFILE="${XDG_CACHE_HOME}/history"
 export HISTSIZE="2000"
@@ -28,5 +29,6 @@ export QT_STYLE_OVERRIDE="kvantum"
 export SAVEHIST="2000"
 
 # Wayland
+export XDG_CURRENT_DESKTOP=river
 export XKB_DEFAULT_LAYOUT=us
 export XKB_DEFAULT_OPTIONS=compose:rctrl
