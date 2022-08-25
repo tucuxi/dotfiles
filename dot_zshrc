@@ -3,6 +3,7 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 setopt extended_glob
 setopt histignorealldups
+setopt histignorespace
 
 alias ..='cd ..'
 alias ...='cd ../..'
