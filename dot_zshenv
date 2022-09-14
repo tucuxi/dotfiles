@@ -9,7 +9,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export EDITOR VISUAL TERMINAL
 : "${BROWSER:=firefox}" "${DIFFPROG:=meld}" "${READER:=zathura}" 
 export BROWSER DIFFPROG READER
-export PAGER="less -R"
+export PAGER="less"
 
 # gpg
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
