@@ -8,6 +8,7 @@ riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_
 
 riverctl spawn waybar
 riverctl spawn "swaybg -i $(nextpic.sh bing) -m fill"
+riverctl spawn "swayidle -w timeout 600 'wlr-randr --output DP-3 --off' resume 'wlr-randr --output DP-3 --on'"
 riverctl spawn udiskie
 
 riverctl map normal Super Return spawn alacritty
