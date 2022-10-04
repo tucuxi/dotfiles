@@ -3,16 +3,6 @@
 # Stop child processes before exiting
 trap "pkill -P $$" EXIT
 
-# Load keymap modifications if available
-modifykeymap() {
-	while [ "$#" != "0" ]; do
-		[ -f "$1" ] && xmodmap "$1"
-		shift
-	done
-}
-
-modifykeymap /etc/X11/xinit/.Xmodmap $HOME/.Xmodmap
-
 # Autostart
 
 lxsession &
@@ -21,6 +11,6 @@ sxhkd &
 
 # Update status bar periodically
 while true; do
-	xsetroot -name "$(date '+ %a %-d %b %R')"
-	sleep 10
+    xsetroot -name "$(date '+ %a %-d %b %R')"
+    sleep 10
 done &
