@@ -3,10 +3,4 @@ typeset -U PATH path
 path=($path[@] "$HOME/.local/bin" "$GOPATH/bin")
 export PATH
 
-# Start X
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	mkdir -p ${XDG_STATE_HOME:=$HOME/.local/state}/sx
-	exec sx 2> $XDG_STATE_HOME/sx/xsession-errors
-fi
- 
 # vim: ft=bash
