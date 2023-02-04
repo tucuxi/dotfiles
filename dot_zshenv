@@ -5,7 +5,7 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # Preferred applications
-: "${EDITOR:=helix}" "${VISUAL:=helix}" "${TERMINAL:=alacritty}"
+: "${EDITOR:=helix}" "${VISUAL:=helix}" "${TERMINAL:=kitty}"
 export EDITOR VISUAL TERMINAL
 : "${BROWSER:=firefox}" "${DIFFPROG:=meld}" "${READER:=zathura}" 
 export BROWSER DIFFPROG READER

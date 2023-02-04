@@ -98,9 +98,6 @@ zstyle ':completion:*' menu select
 autoload -U bashcompinit && bashcompinit
 complete -C aws_completer aws
 
-# Enable kitty completions
-hash kitty 2> /dev/null && kitty + complete setup zsh | source /dev/stdin
-
 # Enable editor
 autoload -Uz edit-command-line
 zle -N edit-command-line
