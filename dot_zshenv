@@ -26,8 +26,8 @@ export HISTSIZE="2000"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export QT_STYLE_OVERRIDE="kvantum"
 export SAVEHIST="2000"
+export MOZ_ENABLE_WAYLAND=1
 
 # Wayland
-export XDG_CURRENT_DESKTOP=river
 export XKB_DEFAULT_LAYOUT=us
 export XKB_DEFAULT_OPTIONS=compose:rctrl
