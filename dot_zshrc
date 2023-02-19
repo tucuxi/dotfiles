@@ -47,6 +47,11 @@ extract() {
 	fi
 }
 
+# Shell integration for foot terminal
+precmd() {
+	print -Pn "\e]133;A\e\\" # enable jumping to prompts
+}
+
 # Use emacs keybindings
 bindkey -e
 
