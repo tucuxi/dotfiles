@@ -11,8 +11,8 @@ export EDITOR VISUAL TERMINAL
 export BROWSER DIFFPROG READER
 export PAGER="less"
 
-# gpg
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+# ssh
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gcr/ssh"
 
 # Application settings
 export _JAVA_AWT_WM_NONREPARENTING="1"

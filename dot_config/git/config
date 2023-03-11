@@ -23,3 +23,5 @@
 	name = Klaus-Dieter Schmatz
 	email = kschmatz@gmail.com
 	signingkey = C260994EA35C20A7
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
