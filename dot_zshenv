@@ -11,7 +11,7 @@ export VISUAL="helix"
 export PAGER="less"
 export BROWSER="chromium"
 export DIFFPROG="meld"
-export READER="zathura"
+export READER="evince"
 
 # ssh
 unset SSH_AGENT_PID
