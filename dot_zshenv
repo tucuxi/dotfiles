@@ -9,7 +9,7 @@ export TERMINAL="foot"
 export EDITOR="helix"
 export VISUAL="helix"
 export PAGER="less"
-export BROWSER="chromium"
+export BROWSER="brave"
 export DIFFPROG="meld"
 export READER="evince"
 
