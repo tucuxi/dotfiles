@@ -69,6 +69,11 @@ video/x-nsv=org.gnome.Totem.desktop
 video/x-theora=org.gnome.Totem.desktop
 video/x-theora+ogg=org.gnome.Totem.desktop
 video/x-totem-stream=org.gnome.Totem.desktop
+x-scheme-handler/http=brave-browser.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
 
 [Added Associations]
 image/bmp=org.gnome.eog.desktop;
