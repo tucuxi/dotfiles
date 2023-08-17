@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Adapted from https://github.com/luispabon/borg-s3-home-backup
 

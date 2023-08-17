@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 case "${1,,}" in
     *.png|*.jpg|*.jpeg|*.webp) mediainfo "$1";;
