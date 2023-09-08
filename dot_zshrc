@@ -12,12 +12,12 @@ alias e='$VISUAL'
 alias h='history'
 alias o='xdg-open'
 
-# Use exa instead of ls and tree
-alias l='exa --icons --group-directories-first -F'
-alias la='exa --icons --group-directories-first -aF'
-alias ll='exa --icons --group-directories-first -l'
-alias lla='exa --icons --group-directories-first -al'
-alias tree='exa --icons -T'
+# Use eza instead of ls and tree
+alias l='eza --icons --group-directories-first -F'
+alias la='eza --icons --group-directories-first -aF'
+alias ll='eza --icons --group-directories-first -l'
+alias lla='eza --icons --group-directories-first -al'
+alias tree='eza --icons -T'
 
 # systemd
 alias jc='journalctl -e'
