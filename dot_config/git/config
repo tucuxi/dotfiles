@@ -14,11 +14,18 @@
 	gpgsign = true
 [core]
 	autocrlf = input
+	pager = delta
+[delta]
+	navigate = true    # use n and N to move between diff sections
+	light = false      # set to true if you're in a terminal w/ a light background color
 [diff]
-	renameLimit = 10000
-	tool = meld
+	colorMoved = default
 [init]
 	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = diff3
 [user]
 	name = Klaus-Dieter Schmatz
 	email = kschmatz@gmail.com
