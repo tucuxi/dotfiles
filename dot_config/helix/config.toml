@@ -3,5 +3,3 @@ theme = "gruvbox"
 [editor]
 line-number = "relative"
 
-[keys.normal]
-";" = "repeat_last_motion"
