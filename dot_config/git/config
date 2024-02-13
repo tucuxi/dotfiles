@@ -30,3 +30,5 @@
 	name = Klaus-Dieter Schmatz
 	email = kschmatz@gmail.com
 	signingkey = C260994EA35C20A7
+[rerere]
+	enabled = true
