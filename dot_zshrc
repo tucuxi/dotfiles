@@ -1,6 +1,3 @@
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
-
 setopt extended_glob
 setopt histignorealldups
 setopt histignorespace
@@ -8,6 +5,7 @@ setopt histignorespace
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias e='$VISUAL'
 alias h='history'
 alias o='xdg-open'
