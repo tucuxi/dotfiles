@@ -22,7 +22,6 @@ export EXA_COLORS="xx=37"
 export FONTCONFIG_PATH=/etc/fonts   # for Brave
 export FONTCONFIG_FILE=/etc/fonts/fonts.conf   # for Brave
 export FZF_DEFAULT_COMMAND="fd --type f"
-export GOPATH="${HOME}/go"
 export LESSHISTFILE="-"
 export HISTFILE="${XDG_CACHE_HOME}/history"
 export HISTSIZE="2000"
