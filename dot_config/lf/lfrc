@@ -24,6 +24,7 @@ set scrolloff 10
 set icons
 
 set drawbox
+set roundbox
 
 # turn on file preview
 set previewer preview.sh
