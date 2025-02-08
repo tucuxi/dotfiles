@@ -5,7 +5,7 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # Preferred applications
-export TERMINAL="foot"
+export TERMINAL="ghostty"
 export EDITOR="helix"
 export VISUAL="helix"
 export PAGER="less"
