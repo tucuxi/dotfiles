@@ -1,6 +1,6 @@
 # Eliminate duplicates in PATH and add .local/bin
 typeset -U PATH path
-path=($path[@] "$GOPATH/bin" "$HOME/.local/bin")
+path=($path[@] "$HOME/go/bin" "$HOME/.local/bin")
 export PATH
 
 # vim: ft=bash
