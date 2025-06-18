@@ -126,9 +126,6 @@ load "${XDG_CONFIG_HOME}/lf/lfcd.sh"
 # Set lf icons
 load "${XDG_CONFIG_HOME}/lf/lficons.sh"
 
-# Enable broot
-load "${XDG_CONFIG_HOME}/broot/launcher/bash/br"
-
 # Set starship prompt
 hash starship 2> /dev/null && eval "$(starship init zsh)"
 
