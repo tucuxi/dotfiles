@@ -13,8 +13,8 @@ alias o='xdg-open'
 # Use eza instead of ls and tree
 alias l='eza --icons --group-directories-first -F'
 alias la='eza --icons --group-directories-first -aF'
-alias ll='eza --icons --group-directories-first -l'
-alias lla='eza --icons --group-directories-first -al'
+alias ll='eza --icons --group-directories-first --git -l'
+alias lla='eza --icons --group-directories-first --git -al'
 alias tree='eza --icons -T'
 
 # systemd
