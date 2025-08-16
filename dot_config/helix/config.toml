@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "starlight"
 
 [editor]
 line-number = "relative"
