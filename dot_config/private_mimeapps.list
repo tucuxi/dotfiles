@@ -71,13 +71,13 @@ x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=com.brave.Browser.desktop;
 x-scheme-handler/https=com.brave.Browser.desktop;
 image/avif=org.gnome.gThumb.desktop;
-image/jpeg=org.gnome.gThumb.desktop;
+image/jpeg=org.gnome.gThumb.desktop;org.gnome.Loupe.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 image/bmp=org.gnome.eog.desktop
 image/gif=org.gnome.eog.desktop
-image/jpeg=org.gnome.gThumb.desktop
+image/jpeg=org.gnome.Loupe.desktop
 image/jpg=org.gnome.eog.desktop
 image/pjpeg=org.gnome.eog.desktop
 image/png=org.gnome.eog.desktop
