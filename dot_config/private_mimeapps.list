@@ -72,6 +72,7 @@ x-scheme-handler/http=com.brave.Browser.desktop;
 x-scheme-handler/https=com.brave.Browser.desktop;
 image/avif=org.gnome.gThumb.desktop;
 image/jpeg=org.gnome.gThumb.desktop;org.gnome.Loupe.desktop;
+audio/x-opus+ogg=io.bassi.Amberol.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
@@ -151,3 +152,4 @@ x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=com.brave.Browser.desktop;
 x-scheme-handler/https=com.brave.Browser.desktop;
 x-scheme-handler/unknown=brave-browser.desktop
+audio/x-opus+ogg=io.bassi.Amberol.desktop
