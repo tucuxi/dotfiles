@@ -1,0 +1,10 @@
+[Unit]
+Description=Automated Borg Backup to USB Drive
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/borg/intenso-documents.env
+ExecStartPre=/usr/bin/udisksctl mount -b /dev/disk/by-uuid/6c0705a8-aa0e-4734-b218-dbe8c8ab0b20
+ExecStart=/usr/bin/borg create --compression zstd /run/media/tux/INTENSO/Borg-Backup/Documents::{now} %h/Documents
+StandardOutput=journal
+StandardError=journal
