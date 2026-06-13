@@ -3,5 +3,8 @@ theme = "starlight"
 [editor]
 line-number = "relative"
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 ret = ["move_line_down", "goto_line_start"]
