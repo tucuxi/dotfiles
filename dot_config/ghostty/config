@@ -1,4 +1,5 @@
 theme = Starlight
+font-family = monospace
 font-size = 11
 window-width = 108
 window-height = 44
