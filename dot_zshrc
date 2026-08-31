@@ -1,11 +1,11 @@
-setopt extended_glob
-setopt histignorealldups
-setopt histignorespace
+setopt AUTO_CD
+setopt EXTENDED_GLOB
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
 alias e='$VISUAL'
 alias h='history'
 alias o='xdg-open'
